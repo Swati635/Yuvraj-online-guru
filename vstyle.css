@@ -1,0 +1,34 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+
+#video-background{
+    position: absolute;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    background-size: cover;
+    
+}
+@media (min-aspect-ratio:16/9)
+{
+ #video-background{
+     width:100%;
+     height: auto;
+ }
+}
+@media (min-aspect-ratio:16/9)
+{
+ #video-background{
+     width:auto;
+     height: 100%;
+ }
+}
+#header{
+ background: rgba(140, 140, 189, 0.5);
+ height:100vh;
+}

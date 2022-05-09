@@ -1,0 +1,19 @@
+.footer
+{
+    height: 250px;
+    width: 100%;
+    background-color: rgb(110, 187, 170);
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerb
+{
+    height: 180px;
+    width: 300px;
+    border: 2px solid rgb(162, 211, 214);
+    float: left;
+    color: rgb(51, 33, 33);
+    align-items: center;
+}

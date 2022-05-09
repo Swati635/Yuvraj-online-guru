@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YUVRAJ ONLINE GURU </title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <!--<form action="#" method="POST" id="my-form">-->
+    <form action="#" autocomplete="off" onsubmit="return validation()">
+      <table cellspacing="15" align="center">
+
+        <tr><td><input type="text" id="user" placeholder="UserName">
+          <br><span id="userr"></span>
+        </td></tr>
+        <tr><td><input type="text" id="pwd" placeholder="Password">
+          <br> <span id="pwde"></span>
+        </td></tr>
+        <tr><td><input type="text" id="conpass" placeholder="Confirm Password">
+          <br> <span id="firm"></span>
+        </td></tr>
+        <tr><td><input type="text" id="email" placeholder="Email">
+          <br><span id="mail"></span>
+        </td></tr>
+        <tr><td><input type="text" id="mobile" placeholder="Mobile(Do not write +91)">
+          <br> <span id="phone"></span>
+        </td></tr>
+        <tr><td><input type="submit" id="btn" placeholder=""></td></tr>
+      </table>
+  </form>
+  <script type="text/JavaScript">
+     function validation() 
+     {
+       var user = document.getElementById('user').value;
+       var pass = document.getElementById('pwd').value;
+       var Conpass= document.getElementById('conpass').value;
+       var email = document.getElementById('email').value;
+       var mobile = document.getElementById('mobile').value;
+       
+       if(user== "")
+       {
+        document.getElementById('userr').innerHTML="**Please write user name  in the box**";
+        return false;
+       }
+           if(user.length<2)
+              {
+               document.getElementById('userr').innerHTML="**Please write  more than one character   in the box**";
+               return false;
+              }
+
+            if(!isNaN(user))
+              {
+               document.getElementById('userr').innerHTML="**Numbers are not allowed**";
+               return false;
+              }
+              else
+              {
+                document.getElementById('userr').innerHTML="";
+              }
+
+
+    if(pass== "")
+       {
+        document.getElementById('pwde').innerHTML="**Please write password in the box**";
+       }   
+         if(pass.length<8)
+       {
+        document.getElementById('pwde').innerHTML="**Please write password of atleast 8 characters in the box**";
+        return false;
+
+       }
+
+          
+       if(pass.search(/[0-9]/)== -1)
+       {
+        document.getElementById('pwde').innerHTML="**Please write password of atleast 1 Numeric character in the box**";
+        return false;
+       }
+          
+       if(pass.search(/[a-z]/)== -1)
+       {
+        document.getElementById('pwde').innerHTML="**Please write password of atleast 1 lower case character in the box**";
+        return false;
+       } 
+           
+       if(pass.search(/[A-Z]/)== -1)
+       {
+        document.getElementById('pwde').innerHTML="**Please write password of atleast 1 upeer case character in the box**";
+        return false;
+       } 
+          
+       if(pass.search(/[!\@\#\$\%\^\&\*\(\)\_\+\=\.\,\~\?]/)== -1)
+       {
+        document.getElementById('pwde').innerHTML="**Please write password of atleast 1 special symbol  in the box**";
+        return false;
+       } 
+            else
+              {
+                document.getElementById('pwde').innerHTML="";
+              }
+
+
+    if(Conpass != pass)
+       {
+        document.getElementById('firm').innerHTML="**Password does not matches**";
+       }
+       else
+              {
+                document.getElementById('firm').innerHTML="";
+              }
+
+
+
+    if(email == "")
+       {
+        document.getElementById('mail').innerHTML="**Please write email in the box**";
+       }
+
+       
+    if(email.indexOf('@') <=0)
+       {
+        document.getElementById('mail').innerHTML="**Invalid Position of @**";
+        return false;
+         
+       }
+   if(email.charAt(email.length-4)!='.' && email.charAt(email.length-3)!='.')
+        {
+          document.getElementById('mail').innerHTML="**Invalid Position of .**";
+          return false;
+        }
+       else
+              {
+                document.getElementById('mail').innerHTML="";
+              }
+
+
+
+
+    if(mobile== "")
+       {
+        document.getElementById('phone').innerHTML="**Please write mobile number in the box**";
+       }
+          if(isNaN(mobile))
+           {
+           document.getElementById('phone').innerHTML="**Please write numbers only **";
+            return false;
+           }
+        
+           if(mobile.length<10 || mobile.length>10 )
+              {
+               document.getElementById('phone').innerHTML="**Please write  10 digit mobile number   in the box**";
+               return false;
+              }
+               else 
+              {
+                document.getElementById('phone').innerHTML="";
+
+              }
+
+     }
+
+
+
+  </script>
+
+</body>
+ </html>     
